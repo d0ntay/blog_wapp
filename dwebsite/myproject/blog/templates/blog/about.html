@@ -1,0 +1,36 @@
+{% extends 'blog/base.html'%}
+
+{% load static %}
+
+{% block content%}
+    <div class="main">
+        <h2>About Page</h2>
+        <hr>
+        <div class="about_me_picture">
+            <img src="{% static 'images/dantepicture.png' %}" width="300" height="300">
+        </div>
+        <div class="aboutmep">
+            <p>
+                Hello, my name is Dante Cicciarelli. I am an aspiring IT profesional with a focus in networking, 
+                security, and programming. I have always been facinated by computers and how they work. Growing up I 
+                enjoyed playing video games which lead me to building my first computer at a pretty young age. After that 
+                my desire to learn more grew exponentialy. For a long time I was very intrigued by hacking and the idea of 
+                being able to make computers do whatever you want. As I learned more I began to become more interested in 
+                networking as I constantly caught myself asking "why". I constantly have questions as to how does this work 
+                and why does it work like that. This pattern of wondering and learning has transformed into a pation that I hope 
+                to one day turn into a career.
+            </p>
+            <p>
+                I created this website as a portfolio to showcase not only my skills and 
+                capabilites, but to show my progress and growth as I discover and learn new things each and every 
+                day! 
+            </p>
+        </div>
+        <div class="certs">
+            <h2>Current Active Certifications</h2>
+            <hr>
+            <a href="{% static 'images/CompTIA Security+ ce certificate.pdf' %}" target="_blank">Security+</a>
+            <a href="{% static 'images/Cisco Certified Network Associate certificate.pdf' %}" target="_blank">CCNA</p>
+        </div>
+    </div>
+{% endblock%}

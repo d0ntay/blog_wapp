@@ -1,0 +1,23 @@
+{% extends 'blog/base.html'%}
+
+{% block content%}
+    <div class="upload">
+        <p>{{ post.date }}</p>
+        <h4>{{ post.title}}</h4>
+        <p>Dante Cicciarelli</p>
+        <hr>
+        <div class="article">
+            <div class="article">
+                <p>Have you ever wondered which hosts are currently up and active on your network? You may know that your little brother is on his laptop and that your mom is using her ipad, but wouldn't you like to know what IP addresses are tied to which device?</p>
+                <p>Today, scanning networks is as easy as running Nmap and punching in a few arguments. There is even a GUI for Nmap which makes it even easier! Nmap is great and it works very well, but in real scenarios you won't always have every tool available to you. So what options are you left with? Well if the title didn't already give it away, you can make your own network analyzer! There are multiple ways to do this but in my opinion, Python makes it much easier.</p>
+                <p>As you know Python code does not require a compiler and is easy to write. This is great because we can not afford to spend hours and hours writing and debugging only to find out that it won't even run in the environment. Furthermore you will find Python is more often than not already installed on internal servers which allows you to create whatever you want to achieve your goal.</p>
+                <p>The analyzer will be made using the Scapy package. I recommend you read the project description as well as the documentation to have a good understanding of how Scapy works. In short, Scapy allows you to create, manipulate, capture, and store packets. Our analyzer will be sending ARP requests so Scapy is the perfect package for the job. We are using ARP instead of ICMP because for one ICMP is commonly blocked by firewalls so your scan may not be as accurate and secondly ICMP just sticks out to anyone watching the packet flow, it's much more common to see ARP broadcasts.</p>
+                <p>To start, you will need to install the Scapy package. Once installed, create a python file and import the package. Now we are going to identify the interface we want to send the packet out of. To see which interface that is, just run ipconfig/ifconfig depending on the OS you use and search for it there. Then we will identify the ip range. Again this information is located using the ipconfig/ifconfig command. For most cases a subnet mask 255.255.255.0 will do but just check your ipconfig/ifconfig to be sure. We will use CIDR notation here. Then we define the destination which will be broadcast since we want to scan everything. We will use FF:FF:FF:FF:FF:FF here. <img src="/static/images/2024/2024-1/pic2.png" width="100%">Now we begin crafting the packet as well as variables for the ARP replies. Finally as a final touch we will print out source mac addresses and IP addresses from the ARP replies we stored.<img src="/static/images/2024/2024-1/pic4.png" width="100%"></p>
+                <p>Now you have a working network analyzer that you made all by yourself! PLEASE BE CAREFUL AND ONLY SCAN NETWORKS THAT YOU OWN AND OR HAVE PERMISSION TO SCAN.<img src="/static/images/2024/2024-1/pic5.png" width="100%"></p>
+                <p>If you want to take it a step further we can now scan for active ports on the host. To do this I use the Socket module which allows us to connect to a protocol using a socket which inturn lets us know if it is open or not. Now that you have a list of active hosts from the previous program we just wrote you can now probe each host for open ports. So we will identify the target ip address and just assign the port as a range of ports. Then we create the socket and try to establish a connection. If it connects then we know the port is open, otherwise the port is closed.<img src="/static/images/2024/2024-1/pic6.png" width="100%"> That is it! <img src="/static/images/2024/2024-1/pic7.png" width="100%"></p>
+                <p>Thank you for reading, have a great day!</p>
+            </div>
+        </div>
+        </div>
+
+{% endblock%}

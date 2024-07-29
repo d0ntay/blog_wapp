@@ -1,0 +1,166 @@
+body{
+    font-family: monospace;
+    background-color: hsl(0, 0%, 10%);
+}
+h1{
+    color: white;
+    font-family: monospace;
+    text-align: center;
+    font-size: xx-large
+}
+h2{
+    color: white;
+    font-family: monospace;
+    margin: 25px;
+}
+h3{
+    color: white;
+    font-family: monospace;
+    font-size: x-large;
+    text-decoration: none;
+}
+h4{
+    color: white;
+    font-family: monospace;
+    font-size: xx-large;
+}
+hr{
+    border-style: solid;
+    border-color: white;
+    font-family: monospace;
+    margin: 15px;
+}
+.heronav{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav_item{
+    display: inline-block;
+    margin-right: 25px;
+}
+.nav_item a{
+    color: white;
+    font-family: monospace;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: large;
+}
+.nav_item a:hover{
+    transition: all .3s ease-in-out;
+    color: #468dc3;
+}
+.main{
+    background-color: black;
+    border-radius: 5px;
+    margin: 25px;
+    overflow: hidden;
+}
+.uploads{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.card{
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    outline-width: 10px;
+    height: 400px;
+    width: 31%;
+    margin: 10px;
+    border-radius: 10px;
+}
+.container a{
+    color: white;
+    font-family: monospace;
+    text-decoration: none;
+}
+.container a:hover{
+    transition: all .3s ease-in-out;
+    color: #468dc3;
+}
+.card img{
+    width: 100%;
+}
+.card img:hover{
+    transition: all .75s ease-in-out;
+    transform: scale(1.05);
+}
+.about_me_picture{
+    float: left;
+    margin: 5%;
+}
+.aboutmep{
+    color: white;
+    font-family: monospace;
+    font-size: x-large;
+    margin: 25px;
+    margin-right: 5%;
+}
+.certs{
+    text-align: center;
+}
+.certs a{
+    color: white;
+    font-family: monospace;
+    text-decoration: none;
+    font-size: x-large;
+    margin: 10px;
+}
+.certs a:hover{
+    transition: all .3s ease-in-out;
+    color: #468dc3;
+}
+.upload{
+    background-color: black;
+    border-radius: 5px;
+    margin: 25px;
+    padding: 25px;
+    overflow: hidden;
+    text-align: center;
+}
+.upload p{
+    color: white;
+    font-family: monospace;
+}
+.article{
+    text-align: left;
+    padding: 25px;
+}
+.article p{
+    color: white;
+    font-size: x-large;
+    font-family: monospace;
+}
+.contact p{
+    color: white;
+    font-family: monospace;
+    font-size: x-large;
+    margin: 25px;
+    text-align: center;
+}
+.socialitem{
+    text-align: center;
+    margin: 25px;
+}
+.social a{
+    color: white;
+    font-family: monospace;
+    text-decoration: none;
+    font-size: x-large;
+}
+.social a:hover{
+    transition: all .3s ease-in-out;
+    color: #468dc3;
+}
